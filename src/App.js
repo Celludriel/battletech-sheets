@@ -1,22 +1,22 @@
+import { useEffect, useState } from 'react';
+import './App.css';
 import "primeflex/primeflex.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";
-import { useEffect, useState } from 'react';
-import './App.css';
-import Mech from './components/Mech';
-import MechData from "./components/MechData";
-import MechInternal from './components/MechInternal';
-import WarriorData from "./components/WarriorData";
-import BattleTechSheetService from './service/BattleTechSheetService';
 import { Divider } from 'primereact/divider';
-import CriticalHitTable from "./components/CriticalHitTable";
 import { ReactComponent as HeatData } from './svg/HeatData.svg';
 import { ReactComponent as Heat } from './svg/Heat.svg';
 import { ReactComponent as MechRecordSheet } from './svg/MechRecordSheet.svg';
 import { ReactComponent as ArmorDiagram } from './svg/ArmorDiagram.svg';
 import { ReactComponent as CriticalHitTableBanner } from './svg/CriticalHitTable.svg';
 import { ReactComponent as InternalStructureDiagram } from './svg/InternalStructureDiagram.svg';
+import Mech from './components/Mech';
+import MechData from "./components/MechData";
+import MechInternal from './components/MechInternal';
+import WarriorData from "./components/WarriorData";
+import BattleTechSheetService from './service/BattleTechSheetService';
+import CriticalHitTable from "./components/CriticalHitTable";
 
 function App() {
   const [mechdata, setMechData] = useState()
