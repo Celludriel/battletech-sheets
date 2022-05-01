@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 312 34" width="312" height="34">
+    <defs>
+        <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+            <path d="m-789-739h1224v1530h-1224z" />
+        </clipPath>
+    </defs>
+    <style>tspan{white-space:pre}.isdbana{stroke:#fff;stroke-linejoin:round;stroke-width:1.9}.isdbanb{font-size: 12px;fill: #ffffff;font-family: "Eurostile LT Std"}</style>
+    <g clip-path="url(#cp1)">
+        <path class="isdbana" d="m299.7 32.6h-288.1l-10.4-15.6 10.4-15.6h288.1l10.9 15.6z" />
+        <text style="transform:matrix(.999,0,0,1.001,9.479,23.315)">
+            <tspan x="0" y="0" class="isdbanb">INTERNAL STRUCTURE DIAGRAM</tspan>
+        </text>
+    </g>
+</svg>

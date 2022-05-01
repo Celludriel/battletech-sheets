@@ -1,6 +1,7 @@
 import { Divider } from 'primereact/divider';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import { ReactComponent as MechDataBanner } from '../svg/MechData.svg';
 
 function MechData({ data, setMechData }) {
 
@@ -8,7 +9,7 @@ function MechData({ data, setMechData }) {
         <>
             <div className="card">
                 <div className="field grid">
-                    <img alt="Mech Data" src="Mech Data.svg" />
+                    <MechDataBanner />
                 </div>
                 <div className="field grid">
                     <label htmlFor="type" className="col-fixed" style={{ width: 100 }}>Type:</label>
@@ -68,15 +69,15 @@ function MechData({ data, setMechData }) {
                     {
                         data && data.equipment &&
                         <DataTable value={data.equipment} size={'small'} responsiveLayout="scroll">
-                            <Column field="quantity" header="Qty" style={{width:'5%'}}></Column>
-                            <Column field="type" header="Type" style={{width:'50%'}}></Column>
-                            <Column field="location" header="Loc" style={{width:'5%'}}></Column>
-                            <Column field="heat" header="Ht" style={{width:'5%'}}></Column>
+                            <Column field="quantity" header="Qty" style={{width:'1%'}}></Column>
+                            <Column field="type" header="Type" style={{width:'71%'}}></Column>
+                            <Column field="location" header="Loc" style={{width:'1%'}}></Column>
+                            <Column field="heat" header="Ht" style={{width:'1%'}}></Column>
                             <Column field="damage" header="Dmg" style={{width:'13%'}}></Column>
-                            <Column field="minRange" header="Min" style={{width:'3%'}}></Column>
-                            <Column field="shortRange" header="Sht" style={{width:'3%'}}></Column>
-                            <Column field="mediumRange" header="Med" style={{width:'3%'}}></Column>
-                            <Column field="longRange" header="Lng" style={{width:'3%'}}></Column>
+                            <Column field="minRange" header="Min" style={{width:'1%'}}></Column>
+                            <Column field="shortRange" header="Sht" style={{width:'1%'}}></Column>
+                            <Column field="mediumRange" header="Med" style={{width:'1%'}}></Column>
+                            <Column field="longRange" header="Lng" style={{width:'1%'}}></Column>
                         </DataTable>
                     }
                 </div>

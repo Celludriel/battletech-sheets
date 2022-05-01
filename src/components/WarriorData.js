@@ -1,10 +1,12 @@
+import { ReactComponent as WarriorDataBanner } from '../svg/WarriorData.svg';
+
 function WarriorData({data, setMechData}) {
 
     return (
         <>
         <div className="card">
         <div className="field grid">
-                <img alt="Warrior Data" src="Warrior Data.svg" />
+                <WarriorDataBanner />
             </div>
            <div className="field grid">
                 <label htmlFor="name" className="col-fixed" style={{width: 70}}>Name:</label>

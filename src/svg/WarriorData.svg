@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 34" width="194" height="34">
+    <defs>
+        <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+            <path d="m-507-189h1224v1530h-1224z" />
+        </clipPath>
+    </defs>
+    <style>tspan{white-space:pre}.wdbana{stroke:#fff;stroke-linejoin:round;stroke-width:1.9}.wdbanb{font-size: 14px;fill: #ffffff;font-family: "Eurostile LT Std"}</style>
+    <g clip-path="url(#cp1)">
+        <path class="wdbana" d="m182.5 32.2h-170.3l-10.4-15.6 10.4-15.6h170.3l10.4 15.6z" />
+        <text style="transform:matrix(.999,0,0,1.001,13.031,24.015)">
+            <tspan x="0" y="0" class="wdbanb">WARRIOR DATA</tspan>
+        </text>
+    </g>
+</svg>

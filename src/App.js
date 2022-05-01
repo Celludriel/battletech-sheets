@@ -13,6 +13,10 @@ import { Divider } from 'primereact/divider';
 import CriticalHitTable from "./components/CriticalHitTable";
 import { ReactComponent as HeatData } from './svg/HeatData.svg';
 import { ReactComponent as Heat } from './svg/Heat.svg';
+import { ReactComponent as MechRecordSheet } from './svg/MechRecordSheet.svg';
+import { ReactComponent as ArmorDiagram } from './svg/ArmorDiagram.svg';
+import { ReactComponent as CriticalHitTableBanner } from './svg/CriticalHitTable.svg';
+import { ReactComponent as InternalStructureDiagram } from './svg/InternalStructureDiagram.svg';
 
 function App() {
   const [mechdata, setMechData] = useState()
@@ -31,7 +35,7 @@ function App() {
             <div className="col-6 text-right">
               <div className="grid">
                 <div className="col-12">
-                  <img alt="Mech Record Sheet" src="MECH RECORD SHEET.svg" />
+                  <MechRecordSheet />
                 </div>
                 <div className="col-8 text-left">
                   <MechData data={mechdata} setMechData={setMechData} />
@@ -51,7 +55,7 @@ function App() {
             <div className="col-6 text-left">
               <div className="grid">
                 <div className="col-12 pl-10">
-                  <img alt="Armor Diagram" src="Armor Diagram.svg" />
+                  <ArmorDiagram />
                 </div>
               </div>
               <div className="grid">
@@ -73,7 +77,7 @@ function App() {
             <div className="col-6 text-left">
               <div className="grid">
                 <div className="col-12">
-                  <img alt="Critical Hit Table" src="Critical Hit Table.svg" />
+                  <CriticalHitTableBanner />
                 </div>
               </div>
               <div className="grid">
@@ -85,7 +89,7 @@ function App() {
             <div className="col-2 text-left">
               <div className="grid">
                 <div className="col-12">
-                  <img alt="Internal Structure Diagram" src="Internal Structure Diagram.svg" />
+                  <InternalStructureDiagram />
                 </div>
               </div>
               <div className="grid">

@@ -59,6 +59,10 @@
   padding: 0 1.25rem;
 }
 
+td {
+  font-size: 11px;
+}
+
 div {
   font-family: 'Eurostile LT Std';
   font-size: 12px;
