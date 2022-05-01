@@ -1,7 +1,7 @@
 import { ReactComponent as FourToSix } from '../svg/FourToSix.svg';
 import { ReactComponent as OneToThree } from '../svg/OneToThree.svg';
 import { ReactComponent as DamageTransfer } from '../svg/DamageTransfer.svg';
-import { ReactComponent as CriticalHits } from '../svg/CriticalHits.svg';
+import CriticalHits from './CriticalHits';
 
 function CriticalHitTable({ data, setMechData }) {
     return (<>
@@ -173,7 +173,7 @@ function CriticalHitTable({ data, setMechData }) {
                         </div>
                         <div className="grid">
                             <div className="col-12">
-                                <CriticalHits />
+                                <CriticalHits  data={data} setMechData={setMechData} />
                             </div>
                         </div>
                         <div className="grid">

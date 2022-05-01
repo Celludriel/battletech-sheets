@@ -122,6 +122,22 @@ const BattleTechSheetService = {
         // criticals
         template.criticalHitTable = mechdata.criticalHitTable
 
+        // critical hits
+        template.criticalHits = {
+            "enghit-1": false,
+            "enghit-2": false,
+            "enghit-3": false,
+            "gyrhit-1": false,
+            "gyrhit-2": false,
+            "gyrhit-3": false,
+            "senhit-1": false,
+            "senhit-2": false,
+            "senhit-3": false,
+            "lifhit-1": false,
+            "lifhit-2": false,
+            "lifhit-3": false
+        }
+
         return template
     }   
 };
