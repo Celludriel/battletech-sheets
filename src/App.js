@@ -5,7 +5,6 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";
 import { Divider } from 'primereact/divider';
-import { ReactComponent as HeatData } from './svg/HeatData.svg';
 import { ReactComponent as Heat } from './svg/Heat.svg';
 import { ReactComponent as MechRecordSheet } from './svg/MechRecordSheet.svg';
 import { ReactComponent as ArmorDiagram } from './svg/ArmorDiagram.svg';
@@ -17,6 +16,7 @@ import MechInternal from './components/MechInternal';
 import WarriorData from "./components/WarriorData";
 import BattleTechSheetService from './service/BattleTechSheetService';
 import CriticalHitTable from "./components/CriticalHitTable";
+import HeatData from "./components/HeatData";
 
 function App() {
   const [mechdata, setMechData] = useState()
@@ -86,7 +86,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="col-2 text-left">
+            <div className="col-3 text-left">
               <div className="grid">
                 <div className="col-12">
                   <InternalStructureDiagram />
@@ -102,11 +102,11 @@ function App() {
               </div>
               <div className="grid">
                 <div className="col-12">
-                  <HeatData />
+                  <HeatData data={mechdata} setMechData={setMechData}  />
                 </div>
               </div>
             </div>
-            <div className="col-4 text-left" style={{ paddingTop: 50, paddingLeft: 50}}>
+            <div className="col-3 text-left" style={{ paddingTop: 50}}>
               <Heat />
             </div>
           </div>

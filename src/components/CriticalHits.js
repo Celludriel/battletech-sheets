@@ -1,7 +1,6 @@
 function CriticalHits({data, setMechData}) {
 
     const pointClick = (evt) => {
-        debugger
         let id = evt.target.id
         let newData = Object.assign({}, data);
 
@@ -21,24 +20,24 @@ function CriticalHits({data, setMechData}) {
                     </clipPath>
                 </defs>
                 <style>{`.crtha{fill:none;stroke:#000;stroke-linecap:round;stroke-width:1.8}.crthb{font-size: 17px;line-height: 17px;fill: #000000;font-family: "Eurostile LT Std"}.crthd{fill:#fff;stroke:#000;stroke-width:1}.crthe{fill:#ff0000;stroke:#000;stroke-width:1}`}</style>
-                <g clip-path="url(#cp1)">
-                    <g clip-path="url(#cp2)">
-                    <rect class="crtha" x="1.2" y="1.9" width="245" height="97" rx="13.6"/>
+                <g clipPath="url(#cp1)">
+                    <g clipPath="url(#cp2)">
+                    <rect className="crtha" x="1.2" y="1.9" width="245" height="97" rx="13.6"/>
                     </g>
                     <text style={{transform: `matrix(0.999, 0, 0, 1.001, 15.263, 86.814)`}}>
-                            <tspan x="0" y="0" class="crthb">Life Support
+                            <tspan x="0" y="0" className="crthb">Life Support
                 </tspan>
                         </text>
                     <text style={{transform: `matrix(0.999, 0, 0, 1.001, 19.323, 65.655)`}}>
-                            <tspan x="0" y="0" class="crthb">Sensor Hits
+                            <tspan x="0" y="0" className="crthb">Sensor Hits
                 </tspan>
                         </text>
                     <text style={{transform: `matrix(0.999, 0, 0, 1.001, 39.537, 44.13)`}}>
-                            <tspan x="0" y="0" class="crthb">Gyro Hits
+                            <tspan x="0" y="0" className="crthb">Gyro Hits
                 </tspan>
                         </text>
                     <text style={{transform: `matrix(0.999, 0, 0, 1.001, 23.418, 22.606)`}}>
-                            <tspan x="0" y="0" class="crthb">Engine Hits
+                            <tspan x="0" y="0" className="crthb">Engine Hits
                 </tspan>
                         </text>
                 </g>

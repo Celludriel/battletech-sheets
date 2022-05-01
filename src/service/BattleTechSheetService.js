@@ -11,6 +11,16 @@ const BattleTechSheetService = {
     getMechTemplate: (mechname) => {
         const mechdata = mechs[mechname];
         const template = {
+            "type" : mechdata.type,
+            "movement" :mechdata.movement,
+            "jumping" : mechdata.jumping,
+            "tonnage" : mechdata.tonnage,
+            "clan" : mechdata.clan,
+            "innerSphere" : mechdata.innerSphere,
+            "equipment": mechdata.equipment,
+            "criticalHitTable": mechdata.criticalHitTable,
+            "singleHeat" : mechdata.singleHeat,
+            "doubleHeat" : mechdata.doubleHeat,
             "armor": {
                 "leftArm": [],                
                 "leftLeg": [],                
@@ -116,12 +126,6 @@ const BattleTechSheetService = {
             template.structure.rightLeg.push(addSelection(mech_internal_points.rightLeg[i]));
         }
 
-        // equipment
-        template.equipment = mechdata.equipment
-
-        // criticals
-        template.criticalHitTable = mechdata.criticalHitTable
-
         // critical hits
         template.criticalHits = {
             "enghit-1": false,
@@ -136,6 +140,16 @@ const BattleTechSheetService = {
             "lifhit-1": false,
             "lifhit-2": false,
             "lifhit-3": false
+        }
+
+        // heat sinks
+        template.heatSinks = []
+        let i=0
+        for(;i < mechdata.heatSinks;i++){
+            template.heatSinks[i] = false;
+        }
+        for(;i < 30;i++){
+            template.heatSinks[i] = null;
         }
 
         return template
