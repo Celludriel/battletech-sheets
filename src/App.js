@@ -1,22 +1,22 @@
-import { useEffect, useState } from 'react';
-import './App.css';
 import "primeflex/primeflex.css";
-import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
-import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";
 import { Divider } from 'primereact/divider';
-import { ReactComponent as Heat } from './svg/Heat.svg';
-import { ReactComponent as MechRecordSheet } from './svg/MechRecordSheet.svg';
-import { ReactComponent as ArmorDiagram } from './svg/ArmorDiagram.svg';
-import { ReactComponent as CriticalHitTableBanner } from './svg/CriticalHitTable.svg';
-import { ReactComponent as InternalStructureDiagram } from './svg/InternalStructureDiagram.svg';
+import "primereact/resources/primereact.min.css"; //core css
+import "primereact/resources/themes/lara-light-indigo/theme.css"; //theme
+import { useEffect, useState } from 'react';
+import './App.css';
+import CriticalHitTable from "./components/CriticalHitTable";
+import Heat from "./components/Heat";
+import HeatData from "./components/HeatData";
 import Mech from './components/Mech';
 import MechData from "./components/MechData";
 import MechInternal from './components/MechInternal';
 import WarriorData from "./components/WarriorData";
 import BattleTechSheetService from './service/BattleTechSheetService';
-import CriticalHitTable from "./components/CriticalHitTable";
-import HeatData from "./components/HeatData";
+import { ReactComponent as ArmorDiagram } from './svg/ArmorDiagram.svg';
+import { ReactComponent as CriticalHitTableBanner } from './svg/CriticalHitTable.svg';
+import { ReactComponent as InternalStructureDiagram } from './svg/InternalStructureDiagram.svg';
+import { ReactComponent as MechRecordSheet } from './svg/MechRecordSheet.svg';
 
 function App() {
   const [mechdata, setMechData] = useState()
@@ -24,6 +24,18 @@ function App() {
   useEffect(() => {
     setMechData(BattleTechSheetService.getMechTemplate("'Gestalt' D2X-G"))
   }, [])
+
+  const addOverflow = () => {
+    let newData = Object.assign({}, mechdata);
+    newData.overflow = mechdata.overflow + 1;
+    setMechData(newData)
+  }
+
+  const lowerOverflow = () => {
+    let newData = Object.assign({}, mechdata);
+    newData.overflow = mechdata.overflow - 1 < 0 ? 0 : mechdata.overflow - 1;
+    setMechData(newData)
+  }
 
   return (
     <div className="App">
@@ -102,12 +114,14 @@ function App() {
               </div>
               <div className="grid">
                 <div className="col-12">
-                  <HeatData data={mechdata} setMechData={setMechData}  />
+                  <HeatData data={mechdata} setMechData={setMechData} />
                 </div>
               </div>
             </div>
-            <div className="col-3 text-left" style={{ paddingTop: 50}}>
-              <Heat />
+            <div className="col-3 text-left" style={{ paddingTop: 50 }}>
+              <Heat data={mechdata} setMechData={setMechData} />
+              <br />
+              <button onClick={lowerOverflow}>-</button>/<button onClick={addOverflow}>+</button>
             </div>
           </div>
         </div>

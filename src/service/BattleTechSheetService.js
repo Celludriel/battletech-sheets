@@ -21,6 +21,7 @@ const BattleTechSheetService = {
             "criticalHitTable": mechdata.criticalHitTable,
             "singleHeat" : mechdata.singleHeat,
             "doubleHeat" : mechdata.doubleHeat,
+            "overflow": 0,
             "armor": {
                 "leftArm": [],                
                 "leftLeg": [],                
@@ -150,6 +151,12 @@ const BattleTechSheetService = {
         }
         for(;i < 30;i++){
             template.heatSinks[i] = null;
+        }
+
+        // heat bar
+        template.heat = [];
+        for(let i = 0;i < 31;i++){
+            template.heat[i] = false;
         }
 
         return template
