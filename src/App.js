@@ -16,10 +16,10 @@ function App() {
   }, [])
 
   return (
-    <div class="mainApp">
-      <div class="Top"></div>
-      <div class="Content"><MechSheet mechdata={mechdata} setMechData={setMechData} /></div>
-      <div class="Bottom"></div>
+    <div className="mainApp">
+      <div className="Top"></div>
+      <div className="Content"><MechSheet mechdata={mechdata} setMechData={setMechData} /></div>
+      <div className="Bottom"></div>
     </div>
   );
 }

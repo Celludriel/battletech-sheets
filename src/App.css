@@ -239,4 +239,7 @@ div {
 
 .Bottom { grid-area: Bottom; }
 
-.Content { grid-area: Content; }
+.Content {
+  justify-self: center; 
+  align-self: center;  
+  grid-area: Content; }
