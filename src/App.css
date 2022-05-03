@@ -222,3 +222,21 @@ div {
 .RT46 { grid-area: RT46; }
 
 .RightLeg { grid-area: RightLeg; }
+
+.mainApp {  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 10% 1fr 10%;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Top Top Top"
+    ". Content ."
+    "Bottom Bottom Bottom";
+}
+
+.Top { grid-area: Top; }
+
+.Bottom { grid-area: Bottom; }
+
+.Content { grid-area: Content; }
