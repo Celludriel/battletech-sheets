@@ -67,3 +67,158 @@ div {
   font-family: 'Eurostile LT Std';
   font-size: 12px;
 }
+
+.container {  display: grid;
+  grid-template-columns: 1100px 0.2fr;
+  grid-template-rows: 195px 0.6fr 1.4fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header ArmorPoints"
+    "TopInformation ArmorPoints"
+    "CriticalData InternalData";
+}
+
+.ArmorPoints { grid-area: ArmorPoints; }
+
+.Header {
+  justify-self: end; 
+  grid-area: Header; 
+}
+
+.TopInformation {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "MechInformation WarriorInformation";
+  grid-area: TopInformation;
+}
+
+.MechInformation {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ".";
+  grid-area: MechInformation;
+}
+
+.WarriorInformation {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.9fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "WarriorData"
+    "CockpitImage";
+  grid-area: WarriorInformation;
+}
+
+.WarriorData { 
+  justify-self: center;
+  grid-area: WarriorData; 
+}
+
+.CockpitImage {
+  justify-self: center;
+  align-self: start;
+  grid-area: CockpitImage;
+}
+
+.CriticalData { grid-area: CriticalData; }
+
+.InternalData {  display: grid;
+  grid-template-columns: 0.05fr 1fr;
+  grid-template-rows: 0.8fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "InternalPoints HeatBar"
+    "HeatSinks HeatBar";
+  grid-area: InternalData;
+}
+
+.HeatBar {
+  justify-self: start;
+  grid-area: HeatBar;
+}
+
+.InternalPoints { grid-area: InternalPoints; }
+
+.HeatSinks { grid-area: HeatSinks; }
+
+.armorPointsContainer {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 36px 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "."
+    ".";
+}
+
+.internalContainer {  display: grid;
+  grid-template-columns: 60px 1fr 60px 1fr 60px 1fr;
+  grid-template-rows: 36px 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "CriticalInternalBanner CriticalInternalBanner . Head . ."
+    "LA13 LeftArm . Head RA13 RightArm"
+    "LA46 LeftArm CT13 CenterTorso RA46 RightArm"
+    "LT13 LeftTorso CT46 CenterTorso RT13 RightTorso"
+    "LT46 LeftTorso . CriticalHits RT46 RightTorso"
+    ". LeftLeg . DamageTransfer . RightLeg";
+}
+
+.LeftArm { grid-area: LeftArm; }
+
+.LeftTorso { grid-area: LeftTorso; }
+
+.LeftLeg { grid-area: LeftLeg; }
+
+.CriticalInternalBanner { grid-area: CriticalInternalBanner; }
+
+.LA13 { grid-area: LA13; }
+
+.LA46 { grid-area: LA46; }
+
+.LT13 { grid-area: LT13; }
+
+.LT46 { grid-area: LT46; }
+
+.Head { grid-area: Head; }
+
+.CenterTorso { grid-area: CenterTorso; }
+
+.CT13 { grid-area: CT13; }
+
+.CT46 { grid-area: CT46; }
+
+.CriticalHits { grid-area: CriticalHits; }
+
+.DamageTransfer { grid-area: DamageTransfer; }
+
+.RightArm { grid-area: RightArm; }
+
+.RA13 { grid-area: RA13; }
+
+.RA46 { grid-area: RA46; }
+
+.RightTorso { grid-area: RightTorso; }
+
+.RT13 { grid-area: RT13; }
+
+.RT46 { grid-area: RT46; }
+
+.RightLeg { grid-area: RightLeg; }

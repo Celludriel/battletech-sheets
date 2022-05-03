@@ -60,12 +60,12 @@ function MechData({ data, setMechData }) {
                     </div>
                 </div>
                 <Divider />
-                <div className="field grid">
+                <div>
                     <div className="col">
                         Weapons & Equipment inventory
                     </div>
                 </div>
-                <div className="field grid">
+                <div>
                     {
                         data && data.equipment &&
                         <DataTable value={data.equipment} size={'small'} responsiveLayout="scroll">
