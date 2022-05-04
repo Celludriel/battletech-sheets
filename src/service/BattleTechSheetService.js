@@ -18,7 +18,16 @@ const BattleTechSheetService = {
             "clan" : mechdata.clan,
             "innerSphere" : mechdata.innerSphere,
             "equipment": mechdata.equipment,
-            "criticalHitTable": mechdata.criticalHitTable,
+            "criticalHitTable": {
+                leftArm: [],
+                leftTorso: [],
+                leftLeg: [],
+                head: [],
+                centerTorso: [],
+                rightArm: [],
+                rightTorso: [],
+                rightLeg: []
+            },
             "singleHeat" : mechdata.singleHeat,
             "doubleHeat" : mechdata.doubleHeat,
             "overflow": 0,
@@ -125,6 +134,56 @@ const BattleTechSheetService = {
 
         for(let i=0;i<mechdata.structure.rightLeg;i++){
             template.structure.rightLeg.push(addSelection(mech_internal_points.rightLeg[i]));
+        }
+
+        // critical hit table
+        for(let i=0;i<mechdata.criticalHitTable.leftArm.length;i++){
+            template.criticalHitTable.leftArm.push({
+                type: mechdata.criticalHitTable.leftArm[i],
+                destroyed: false
+            })
+        }
+        for(let i=0;i<mechdata.criticalHitTable.leftTorso.length;i++){
+            template.criticalHitTable.leftTorso.push({
+                type: mechdata.criticalHitTable.leftTorso[i],
+                destroyed: false
+            })
+        }
+        for(let i=0;i<mechdata.criticalHitTable.leftLeg.length;i++){
+            template.criticalHitTable.leftLeg.push({
+                type: mechdata.criticalHitTable.leftLeg[i],
+                destroyed: false
+            })
+        }
+        for(let i=0;i<mechdata.criticalHitTable.head.length;i++){
+            template.criticalHitTable.head.push({
+                type: mechdata.criticalHitTable.head[i],
+                destroyed: false
+            })
+        }
+        for(let i=0;i<mechdata.criticalHitTable.centerTorso.length;i++){
+            template.criticalHitTable.centerTorso.push({
+                type: mechdata.criticalHitTable.centerTorso[i],
+                destroyed: false
+            })
+        }
+        for(let i=0;i<mechdata.criticalHitTable.rightArm.length;i++){
+            template.criticalHitTable.rightArm.push({
+                type: mechdata.criticalHitTable.rightArm[i],
+                destroyed: false
+            })
+        }
+        for(let i=0;i<mechdata.criticalHitTable.rightTorso.length;i++){
+            template.criticalHitTable.rightTorso.push({
+                type: mechdata.criticalHitTable.rightTorso[i],
+                destroyed: false
+            })
+        }
+        for(let i=0;i<mechdata.criticalHitTable.rightLeg.length;i++){
+            template.criticalHitTable.rightLeg.push({
+                type: mechdata.criticalHitTable.rightLeg[i],
+                destroyed: false
+            })
         }
 
         // critical hits

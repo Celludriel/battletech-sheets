@@ -5,6 +5,17 @@ import { ReactComponent as OneToThree } from '../svg/OneToThree.svg';
 import CriticalHits from './CriticalHits';
 
 function CriticalHitTable({ data, setMechData }) {
+
+    const updateCritical = (evt) => {
+        let id = evt.target.id
+        let parts = id.split("-");
+
+        let newData = Object.assign({}, data);
+
+        newData.criticalHitTable[parts[0]][parts[1]].destroyed = !data.criticalHitTable[parts[0]][parts[1]].destroyed
+        setMechData(newData)
+    }
+
     return (
 
         <div className="internalContainer">
@@ -15,9 +26,9 @@ function CriticalHitTable({ data, setMechData }) {
                         data && data.criticalHitTable &&
                         data.criticalHitTable['leftArm'].map(function (item, key) {
                             return (
-                                <tr key={key}>
-                                    <td>
-                                        {(key % 6) + 1} {item}
+                                <tr key={key} className={item.destroyed ? "red" : "none"} onClick={updateCritical}>
+                                    <td id={`leftArm-${key}`}>
+                                        {(key % 6) + 1} {item.type}
                                     </td>
                                 </tr>)
                         })
@@ -31,9 +42,9 @@ function CriticalHitTable({ data, setMechData }) {
                         data && data.criticalHitTable &&
                         data.criticalHitTable['leftTorso'].map(function (item, key) {
                             return (
-                                <tr key={key}>
-                                    <td>
-                                        {(key % 6) + 1} {item}
+                                <tr key={key} className={item.destroyed ? "red" : "none"} onClick={updateCritical}>
+                                    <td id={`leftTorso-${key}`}>
+                                        {(key % 6) + 1} {item.type}
                                     </td>
                                 </tr>)
                         })
@@ -47,9 +58,9 @@ function CriticalHitTable({ data, setMechData }) {
                         data && data.criticalHitTable &&
                         data.criticalHitTable['leftLeg'].map(function (item, key) {
                             return (
-                                <tr key={key}>
-                                    <td>
-                                        {(key % 6) + 1} {item}
+                                <tr key={key} className={item.destroyed ? "red" : "none"} onClick={updateCritical}>
+                                    <td id={`leftLeg-${key}`}>
+                                        {(key % 6) + 1} {item.type}
                                     </td>
                                 </tr>)
                         })
@@ -68,9 +79,9 @@ function CriticalHitTable({ data, setMechData }) {
                         data && data.criticalHitTable &&
                         data.criticalHitTable['head'].map(function (item, key) {
                             return (
-                                <tr key={key}>
-                                    <td>
-                                        {(key % 6) + 1} {item}
+                                <tr key={key} className={item.destroyed ? "red" : "none"} onClick={updateCritical}>
+                                    <td id={`head-${key}`}>
+                                        {(key % 6) + 1} {item.type}
                                     </td>
                                 </tr>)
                         })
@@ -78,14 +89,15 @@ function CriticalHitTable({ data, setMechData }) {
                 </tbody></table>
             </div>
             <div className="CenterTorso">
+                <br /><span style={{fontSize: 17}}>Center Torso</span>
                 <table><tbody>
                     {
                         data && data.criticalHitTable &&
                         data.criticalHitTable['centerTorso'].map(function (item, key) {
                             return (
-                                <tr key={key}>
-                                    <td>
-                                        {(key % 6) + 1} {item}
+                                <tr key={key} className={item.destroyed ? "red" : "none"} onClick={updateCritical}>
+                                    <td id={`centerTorso-${key}`}>
+                                        {(key % 6) + 1} {item.type}
                                     </td>
                                 </tr>)
                         })
@@ -103,9 +115,9 @@ function CriticalHitTable({ data, setMechData }) {
                         data && data.criticalHitTable &&
                         data.criticalHitTable['rightArm'].map(function (item, key) {
                             return (
-                                <tr key={key}>
-                                    <td>
-                                        {(key % 6) + 1} {item}
+                                <tr key={key} className={item.destroyed ? "red" : "none"} onClick={updateCritical}>
+                                    <td id={`rightArm-${key}`}>
+                                        {(key % 6) + 1} {item.type}
                                     </td>
                                 </tr>)
                         })
@@ -120,9 +132,9 @@ function CriticalHitTable({ data, setMechData }) {
                         data && data.criticalHitTable &&
                         data.criticalHitTable['rightTorso'].map(function (item, key) {
                             return (
-                                <tr key={key}>
-                                    <td>
-                                        {(key % 6) + 1} {item}
+                                <tr key={key} className={item.destroyed ? "red" : "none"} onClick={updateCritical}>
+                                    <td id={`rightTorso-${key}`}>
+                                        {(key % 6) + 1} {item.type}
                                     </td>
                                 </tr>)
                         })
@@ -138,9 +150,9 @@ function CriticalHitTable({ data, setMechData }) {
                         data && data.criticalHitTable &&
                         data.criticalHitTable['rightLeg'].map(function (item, key) {
                             return (
-                                <tr key={key}>
-                                    <td>
-                                        {(key % 6) + 1} {item}
+                                <tr key={key} className={item.destroyed ? "red" : "none"} onClick={updateCritical}>
+                                    <td id={`rightLeg-${key}`}>
+                                        {(key % 6) + 1} {item.type}
                                     </td>
                                 </tr>)
                         })

@@ -243,3 +243,11 @@ div {
   justify-self: center; 
   align-self: center;  
   grid-area: Content; }
+
+tr.red {
+  background-color: red;
+}
+
+tr.none {
+  background-color: white;
+}
