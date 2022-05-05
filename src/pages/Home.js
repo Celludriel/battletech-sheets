@@ -8,9 +8,9 @@ function Home() {
     const [mechdata, setMechData] = useState()
 
     useEffect(() => {
+        let result = BattleTechSheetService.filterByFirstLetter('b')
       setMechData(BattleTechSheetService.getMechTemplate("'Gestalt' D2X-G"))
   
-      let result = BattleTechSheetService.filterByFirstLetter('b')
     }, [])
 
     return (

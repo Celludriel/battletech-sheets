@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { VisibilityContext } from "react-horizontal-scrolling-menu";
 
-function MechCard({ itemId }) {
+function MechCard({ itemId, mechname }) {
     const visibility = useContext(VisibilityContext);
     const visible = visibility.isItemVisible(itemId);
 
@@ -19,7 +19,7 @@ function MechCard({ itemId }) {
             className="card"
         >
             <div>
-                <div>test</div>
+                <div>{mechname}</div>
                 <div style={{ backgroundColor: visible ? "transparent" : "gray" }}>
                     visible: {JSON.stringify(visible)}
                 </div>

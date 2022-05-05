@@ -1,6 +1,6 @@
-import mechs from '../data/mechs.json'
-import mech_armor_points from '../data/mech_armor_points.json'
-import mech_internal_points from '../data/mech_internal_points.json'
+import mechs from './../data/mechs.json'
+import mech_armor_points from './../data/mech_armor_points.json'
+import mech_internal_points from './../data/mech_internal_points.json'
 
 const addSelection = (point) => {
     point["selected"] = false;
