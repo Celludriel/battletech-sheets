@@ -224,8 +224,8 @@ const BattleTechSheetService = {
         return Object.fromEntries(Object.entries(mechs).filter(([key]) => key.toLowerCase().startsWith(letter)));
     },
     filterBySpecialCharacter: () => {
-        const regexp = new RegExp(/^[a-z0-9]+$/i);
-        return Object.fromEntries(Object.entries(mechs).filter(([key]) => regexp.test(key)));
+        const regexp = new RegExp(/^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/);
+        return Object.fromEntries(Object.entries(mechs).filter(([key]) => regexp.test(key)))
     }
 };
 

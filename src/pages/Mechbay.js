@@ -10,11 +10,11 @@ function MechBay() {
     const [cardRollerItems, setCardRollerItems] = useState()
 
     useEffect(() => {
-        let data = BattleTechSheetService.filterByFirstLetter('a')      
-        setCardRollerItems(data)
+        setCardRollerItems(BattleTechSheetService.filterByFirstLetter('a'))
     }, [])
 
     const menuItems = [
+        {label: '#',command:()=>{ setCardRollerItems(BattleTechSheetService.filterBySpecialCharacter())}},
         {label: 'A',command:()=>{ setCardRollerItems(BattleTechSheetService.filterByFirstLetter('a'))}},
         {label: 'B',command:()=>{ setCardRollerItems(BattleTechSheetService.filterByFirstLetter('b'))}},
         {label: 'C',command:()=>{ setCardRollerItems(BattleTechSheetService.filterByFirstLetter('c'))}},
