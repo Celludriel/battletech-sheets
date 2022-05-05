@@ -42,6 +42,10 @@
   src: local('Eurostile LT Std'), url(./fonts/EurostileLTStdBoldExtended2.woff2) format('woff2');
 }
 
+body {
+  height: 100vh;
+}
+
 .pl-10 {
   padding-left: 7rem !important;
 }
@@ -67,6 +71,26 @@ div {
   font-family: 'Eurostile LT Std';
   font-size: 12px;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.react-horizontal-scrolling-menu--wrapper {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* --------------------------------------------- */
 
 .container {  display: grid;
   grid-template-columns: 1100px 0.2fr;
@@ -251,3 +275,60 @@ tr.red {
 tr.none {
   background-color: white;
 }
+
+/* --------------------------------------------- */
+
+.homeContainer {  display: grid;
+  grid-template-columns: 0.4fr 1.3fr 1.3fr 1.3fr 1.3fr 00.4fr;
+  grid-template-rows: 0.2fr 4fr 0.2fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "HomeLeftMargin HomeMenuBar HomeMenuBar HomeMenuBar HomeMenuBar HomeRightMargin"
+    "HomeLeftMargin HomeContent HomeContent HomeContent HomeContent HomeRightMargin"
+    "HomeLeftMargin BottomMargin BottomMargin BottomMargin BottomMargin HomeRightMargin";
+}
+
+.HomeMenuBar { grid-area: HomeMenuBar; }
+
+.HomeContent { grid-area: HomeContent; }
+
+.HomeLeftMargin { grid-area: HomeLeftMargin; }
+
+.HomeRightMargin { grid-area: HomeRightMargin; }
+
+.BottomMargin { grid-area: BottomMargin; }
+
+/* --------------------------------------------- */
+
+#root {  display: grid;
+  grid-template-columns: 0.4fr 1.3fr 1.3fr 1.3fr 1.3fr 00.4fr;
+  grid-template-rows: 0.2fr 0.2fr 0.4fr 3.2fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "BayLeftMargin BayMenuBar BayMenuBar BayMenuBar BayMenuBar BayRightMargin"
+    "BayLeftMargin BayFilterBar BayFilterBar BayFilterBar BayFilterBar BayRightMargin"
+    "BayLeftMargin BayCardRoller BayCardRoller BayCardRoller BayCardRoller BayRightMargin"
+    "BayLeftMargin BayMech1 BayMech2 BayMech3 BayMech4 BayRightMargin";
+}
+
+.BayFilterBar { grid-area: BayFilterBar; }
+
+.BayMenuBar { grid-area: BayMenuBar; }
+
+.BayCardRoller { grid-area: BayCardRoller; }
+
+.BayMech1 { grid-area: BayMech1; }
+
+.BayMech2 { grid-area: BayMech2; }
+
+.BayMech3 { grid-area: BayMech3; }
+
+.BayMech4 { grid-area: BayMech4; }
+
+.BayLeftMargin { grid-area: BayLeftMargin; }
+
+.BayRightMargin { grid-area: BayRightMargin; }

@@ -219,7 +219,14 @@ const BattleTechSheetService = {
         }
 
         return template
-    }   
+    },
+    filterByFirstLetter: (letter) => {
+        return Object.fromEntries(Object.entries(mechs).filter(([key]) => key.toLowerCase().startsWith(letter)));
+    },
+    filterBySpecialCharacter: () => {
+        const regexp = new RegExp(/^[a-z0-9]+$/i);
+        return Object.fromEntries(Object.entries(mechs).filter(([key]) => regexp.test(key)));
+    }
 };
 
 export default BattleTechSheetService;
