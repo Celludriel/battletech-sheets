@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import MechCard from './../components/MechCard';
@@ -69,13 +68,14 @@ function MechBay() {
                     onWheel={onWheel}
                 >
                     {cardRollerItems && 
-                        Object.keys(cardRollerItems).map(function (key, index){
+                        Object.keys(cardRollerItems).map(function (item, key){
                             return (
-                                <MechCard
-                                key={index}
-                                itemId={index} // NOTE: itemId is required for track items
-                                mechname={cardRollerItems[key].type}
-                            />
+                                <div key={key}>
+                                    <MechCard
+                                        itemId={key} // NOTE: itemId is required for track items
+                                        mechName={cardRollerItems[item].type}
+                                    />
+                                </div>
                             )
                         })
                     }

@@ -204,8 +204,13 @@ const BattleTechSheetService = {
 
         // heat sinks
         template.heatSinks = []
+        let totalSinks = mechdata.heatSinks
+        if(template.doubleHeat){
+            totalSinks = totalSinks / 2
+        }
+
         let i=0
-        for(;i < mechdata.heatSinks;i++){
+        for(;i < totalSinks;i++){
             template.heatSinks[i] = false;
         }
         for(;i < 30;i++){
@@ -226,6 +231,9 @@ const BattleTechSheetService = {
     filterBySpecialCharacter: () => {
         const regexp = new RegExp(/^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/);
         return Object.fromEntries(Object.entries(mechs).filter(([key]) => regexp.test(key)))
+    },
+    getByMechKey: (key) => {
+        return mechs[key];
     }
 };
 
