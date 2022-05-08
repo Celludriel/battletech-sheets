@@ -2,18 +2,24 @@ import { Tooltip } from 'primereact/tooltip';
 import { useContext, useEffect, useState } from 'react';
 import { VisibilityContext } from "react-horizontal-scrolling-menu";
 import BattleTechSheetService from './../service/BattleTechSheetService';
+import { useBattletechStore } from '../context/BattletechContext';
 
 function MechCard({ itemId, mechName }) {
     const [mechdata, setMechData] = useState()
+    const battleTechstore = useBattletechStore();
     const visibility = useContext(VisibilityContext);
     const visible = visibility.isItemVisible(itemId);
-
 
     useEffect(() => {
         if (mechName) {
             setMechData(BattleTechSheetService.getByMechKey(mechName))
         }
     }, [mechName])
+
+    const mechCardClick = (evt) => {
+        let parts = evt.target.parentNode.id.split("_")
+        battleTechstore.addMech(parts[2])
+    }
 
     return (
         <div role="button"
@@ -61,7 +67,7 @@ function MechCard({ itemId, mechName }) {
                             </>
                         }
                     </Tooltip>
-                    <div id={`mechcard-${itemId}`}>
+                    <div id={`mechcard_${itemId}_${mechdata.type}`}  onClick={mechCardClick}>
                         <div>{mechdata.type}</div>
                     </div>
                 </>

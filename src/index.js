@@ -4,13 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BattletechContextProvider } from './context/BattletechContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
-    </BrowserRouter>,
+      <BattletechContextProvider>
+        <App />
+      </BattletechContextProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
