@@ -8,7 +8,6 @@ function MechbayOverview({ mechbays }) {
 
     useEffect(() => {
         if (mechbays) {
-            debugger
             let totalTonnage = 0;
             let totalBattleValue = 0;
             for (let i = 0; i < mechbays.length; i++) {

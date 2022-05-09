@@ -5,9 +5,9 @@ import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import MechBayContent from "../components/MechBayContent";
 import { useBattletechStore } from '../context/BattletechContext';
 import BattleTechSheetService from '../service/BattleTechSheetService';
+import MechbayOverview from './../components/MechbayOverview';
 import MechCard from './../components/MechCard';
 import MenuBar from './../components/MenuBar';
-import MechbayOverview from './../components/MechbayOverview';
 
 function MechBay() {
     const battleTechstore = useBattletechStore();
@@ -67,70 +67,72 @@ function MechBay() {
             {() => {
                 return (
                     <>
-                        <div className="BayMenuBar"><MenuBar /></div>
-                        <div className="BayFilterBar" style={{ display: "flex", justifyContent: "space-evenly", padding: 5, fontSize: 17 }}>
-                            <Menubar model={menuItems} />
-                        </div>
-                        <div className="BayCardRoller">
-                            <ScrollMenu
-                                onWheel={onWheel}
-                            >
-                                {cardRollerItems &&
-                                    Object.keys(cardRollerItems).map(function (item, key) {
-                                        return (
-                                            <div key={key}>
-                                                <MechCard
-                                                    itemId={key} // NOTE: itemId is required for track items
-                                                    mechName={cardRollerItems[item].type}
-                                                />
-                                            </div>
-                                        )
-                                    })
+                        <div className="mechbaycontainer">
+                            <div className="BayMenuBar"><MenuBar /></div>
+                            <div className="BayFilterBar" style={{ display: "flex", justifyContent: "space-evenly", padding: 5, fontSize: 17 }}>
+                                <Menubar model={menuItems} />
+                            </div>
+                            <div className="BayCardRoller">
+                                <ScrollMenu
+                                    onWheel={onWheel}
+                                >
+                                    {cardRollerItems &&
+                                        Object.keys(cardRollerItems).map(function (item, key) {
+                                            return (
+                                                <div key={key}>
+                                                    <MechCard
+                                                        itemId={key} // NOTE: itemId is required for track items
+                                                        mechName={cardRollerItems[item].type}
+                                                    />
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </ScrollMenu>
+                            </div>
+                            <div className="Overview"><MechbayOverview mechbays={battleTechstore.getMechLab().bays} /></div>
+                            <div className="BayMech1">
+                                {
+                                    battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[0] !== null &&
+                                    <>
+                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[0]} bay={0} />
+                                        <div><button onClick={() => battleTechstore.clearBay(0)}>remove</button></div>
+                                    </>
                                 }
-                            </ScrollMenu>
-                        </div>
-                        <div className="Overview"><MechbayOverview mechbays={battleTechstore.getMechLab().bays} /></div>
-                        <div className="BayMech1">
-                            {
-                                battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[0] !== null &&
-                                <>
-                                    <MechBayContent mechname={battleTechstore.getMechLab().bays[0]} bay={0}/>
-                                    <div><button onClick={() => battleTechstore.clearBay(0)}>remove</button></div>
-                                </>
-                            }
-                        </div>
-                        <div className="BayMech2">
-                            {
-                                battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[1] !== null &&
-                                <>
-                                    <MechBayContent mechname={battleTechstore.getMechLab().bays[1]} bay={1} />
-                                    <div><button onClick={() => battleTechstore.clearBay(1)}>remove</button></div>
-                                </>
-                            }
-                        </div>
-                        <div className="BayMech3">
-                            {
-                               battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[2] !== null &&
-                               <>
-                                    <MechBayContent mechname={battleTechstore.getMechLab().bays[2]} bay={2} />
-                                    <div><button onClick={() => battleTechstore.clearBay(2)}>remove</button></div>
-                               </>
-                            }
+                            </div>
+                            <div className="BayMech2">
+                                {
+                                    battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[1] !== null &&
+                                    <>
+                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[1]} bay={1} />
+                                        <div><button onClick={() => battleTechstore.clearBay(1)}>remove</button></div>
+                                    </>
+                                }
+                            </div>
+                            <div className="BayMech3">
+                                {
+                                    battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[2] !== null &&
+                                    <>
+                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[2]} bay={2} />
+                                        <div><button onClick={() => battleTechstore.clearBay(2)}>remove</button></div>
+                                    </>
+                                }
 
-                        </div>
-                        <div className="BayMech4">
-                            {
-                                battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[3] !== null &&
-                                <>
-                                    <MechBayContent mechname={battleTechstore.getMechLab().bays[3]} bay={3} />
-                                    <div><button onClick={() => battleTechstore.clearBay(3)}>remove</button></div>
-                                </>
-                            }
+                            </div>
+                            <div className="BayMech4">
+                                {
+                                    battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[3] !== null &&
+                                    <>
+                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[3]} bay={3} />
+                                        <div><button onClick={() => battleTechstore.clearBay(3)}>remove</button></div>
+                                    </>
+                                }
 
+                            </div>
+                            <div className="BayLeftMargin"></div>
+                            <div className="BayRightMargin"></div>
+                            <div className="Footer"></div>
                         </div>
-                        <div className="BayLeftMargin"></div>
-                        <div className="BayRightMargin"></div>
-                        <div className="Footer"></div>
                     </>)
             }}
         </Observer>
