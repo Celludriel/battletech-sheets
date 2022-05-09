@@ -11,14 +11,18 @@ export const createBattletechStore = () => {
         addMech(mech) {
             for(let i=0;i<this.store.mechbay.bays.length;i++){
                 if(this.store.mechbay.bays[i] == null){
-                    this.store.mechbay.bays[i] = mech
+                    let newArray = [...this.store.mechbay.bays]
+                    newArray[i] = mech
+                    this.store.mechbay.bays = newArray
                     return true
                 }
             }
             return false
         },
         clearBay(index) {
-            this.store.mechbay.bays[index] = null
+            let newArray = [...this.store.mechbay.bays]
+            newArray[index] = null
+            this.store.mechbay.bays = newArray
         }
     }
 }

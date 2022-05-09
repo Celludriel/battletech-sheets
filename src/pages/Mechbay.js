@@ -7,6 +7,7 @@ import { useBattletechStore } from '../context/BattletechContext';
 import BattleTechSheetService from '../service/BattleTechSheetService';
 import MechCard from './../components/MechCard';
 import MenuBar from './../components/MenuBar';
+import MechbayOverview from './../components/MechbayOverview';
 
 function MechBay() {
     const battleTechstore = useBattletechStore();
@@ -88,7 +89,7 @@ function MechBay() {
                                 }
                             </ScrollMenu>
                         </div>
-                        <div className="Overview"></div>
+                        <div className="Overview"><MechbayOverview mechbays={battleTechstore.getMechLab().bays} /></div>
                         <div className="BayMech1">
                             {
                                 battleTechstore.getMechLab().bays &&
