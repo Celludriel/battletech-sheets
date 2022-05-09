@@ -17,7 +17,8 @@ function MechCard({ itemId, mechName }) {
     }, [mechName])
 
     const mechCardClick = (evt) => {
-        let parts = evt.target.parentNode.id.split("_")
+        debugger
+        let parts = evt.target.id.split("_")
         battleTechstore.addMech(parts[2])
     }
 
@@ -67,8 +68,8 @@ function MechCard({ itemId, mechName }) {
                             </>
                         }
                     </Tooltip>
-                    <div id={`mechcard_${itemId}_${mechdata.type}`}  onClick={mechCardClick}>
-                        <div>{mechdata.type}</div>
+                    <div id={`mechcard-${itemId}`}  onClick={mechCardClick}>
+                        <div id={`mechcard_${itemId}_${mechdata.type}`} >{mechdata.type}</div>
                     </div>
                 </>
             }
