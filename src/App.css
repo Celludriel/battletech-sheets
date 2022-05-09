@@ -302,9 +302,10 @@ tr.none {
 
 /* --------------------------------------------- */
 
-#root {  display: grid;
+#root {  
+  display: grid;
   grid-template-columns: 0.4fr 1.3fr 1.3fr 1.3fr 1.3fr 00.4fr;
-  grid-template-rows: 0.2fr 0.2fr 0.4fr 3.2fr;
+  grid-template-rows: 0.2fr 0.2fr 0.4fr 1fr 3.7fr 0.6fr;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -312,7 +313,9 @@ tr.none {
     "BayLeftMargin BayMenuBar BayMenuBar BayMenuBar BayMenuBar BayRightMargin"
     "BayLeftMargin BayFilterBar BayFilterBar BayFilterBar BayFilterBar BayRightMargin"
     "BayLeftMargin BayCardRoller BayCardRoller BayCardRoller BayCardRoller BayRightMargin"
-    "BayLeftMargin BayMech1 BayMech2 BayMech3 BayMech4 BayRightMargin";
+    "BayLeftMargin Overview Overview Overview Overview BayRightMargin"
+    "BayLeftMargin MechBay1 MechBay2 MechBay3 MechBay4 BayRightMargin"
+    "BayLeftMargin Footer Footer Footer Footer BayRightMargin";
 }
 
 .BayFilterBar { grid-area: BayFilterBar; }
@@ -321,14 +324,18 @@ tr.none {
 
 .BayCardRoller { grid-area: BayCardRoller; }
 
-.BayMech1 { grid-area: BayMech1; }
-
-.BayMech2 { grid-area: BayMech2; }
-
-.BayMech3 { grid-area: BayMech3; }
-
-.BayMech4 { grid-area: BayMech4; }
-
 .BayLeftMargin { grid-area: BayLeftMargin; }
 
 .BayRightMargin { grid-area: BayRightMargin; }
+
+.Footer { grid-area: Footer; }
+
+.MechBay1 { grid-area: MechBay1; }
+
+.MechBay2 { grid-area: MechBay2; }
+
+.MechBay3 { grid-area: MechBay3; }
+
+.MechBay4 { grid-area: MechBay4; }
+
+.Overview { grid-area: Overview; }

@@ -17,7 +17,6 @@ function MechCard({ itemId, mechName }) {
     }, [mechName])
 
     const mechCardClick = (evt) => {
-        debugger
         let parts = evt.target.id.split("_")
         battleTechstore.addMech(parts[2])
     }

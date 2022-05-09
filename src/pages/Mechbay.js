@@ -2,6 +2,7 @@ import { Observer } from "mobx-react";
 import { Menubar } from 'primereact/menubar';
 import { useEffect, useState } from 'react';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
+import MechBayContent from "../components/MechBayContent";
 import { useBattletechStore } from '../context/BattletechContext';
 import BattleTechSheetService from '../service/BattleTechSheetService';
 import MechCard from './../components/MechCard';
@@ -10,13 +11,9 @@ import MenuBar from './../components/MenuBar';
 function MechBay() {
     const battleTechstore = useBattletechStore();
     const [cardRollerItems, setCardRollerItems] = useState()
-    const [mechBays, setMechBays] = useState()
 
     useEffect(() => {
         setCardRollerItems(BattleTechSheetService.filterByFirstLetter('a'))
-        console.log(battleTechstore.getMechLab())
-        console.log(battleTechstore.getMechLab().bays[0])
-        setMechBays(battleTechstore.getMechLab().bays)
     }, [])
 
     const menuItems = [
@@ -91,11 +88,12 @@ function MechBay() {
                                 }
                             </ScrollMenu>
                         </div>
+                        <div className="Overview"></div>
                         <div className="BayMech1">
                             {
                                 battleTechstore.getMechLab().bays &&
                                 <>
-                                    <div>{battleTechstore.getMechLab().bays[0]}</div>
+                                    <MechBayContent mechname={battleTechstore.getMechLab().bays[0]} />
                                     <div><button onClick={() => battleTechstore.clearBay(0)}>remove</button></div>
                                 </>
                             }
@@ -104,7 +102,7 @@ function MechBay() {
                             {
                                 battleTechstore.getMechLab().bays &&
                                 <>
-                                    <div>{battleTechstore.getMechLab().bays[1]}</div>
+                                    <MechBayContent mechname={battleTechstore.getMechLab().bays[1]} />
                                     <div><button onClick={() => battleTechstore.clearBay(1)}>remove</button></div>
                                 </>
                             }
@@ -113,8 +111,8 @@ function MechBay() {
                             {
                                battleTechstore.getMechLab().bays &&
                                <>
-                                   <div>{battleTechstore.getMechLab().bays[2]}</div>
-                                   <div><button onClick={() => battleTechstore.clearBay(2)}>remove</button></div>
+                                    <MechBayContent mechname={battleTechstore.getMechLab().bays[2]} />
+                                    <div><button onClick={() => battleTechstore.clearBay(2)}>remove</button></div>
                                </>
                             }
 
@@ -123,7 +121,7 @@ function MechBay() {
                             {
                                 battleTechstore.getMechLab().bays &&
                                 <>
-                                    <div>{battleTechstore.getMechLab().bays[3]}</div>
+                                    <MechBayContent mechname={battleTechstore.getMechLab().bays[3]} />
                                     <div><button onClick={() => battleTechstore.clearBay(3)}>remove</button></div>
                                 </>
                             }
@@ -131,6 +129,7 @@ function MechBay() {
                         </div>
                         <div className="BayLeftMargin"></div>
                         <div className="BayRightMargin"></div>
+                        <div className="Footer"></div>
                     </>)
             }}
         </Observer>
