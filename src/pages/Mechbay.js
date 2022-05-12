@@ -95,7 +95,7 @@ function MechBay() {
                                 {
                                     battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[0] !== null &&
                                     <>
-                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[0]} bay={0} />
+                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[0]} bay={0} showStats={true}/>
                                         <div><button onClick={() => battleTechstore.clearBay(0)}>remove</button></div>
                                     </>
                                 }
@@ -104,7 +104,7 @@ function MechBay() {
                                 {
                                     battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[1] !== null &&
                                     <>
-                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[1]} bay={1} />
+                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[1]} bay={1} showStats={true} />
                                         <div><button onClick={() => battleTechstore.clearBay(1)}>remove</button></div>
                                     </>
                                 }
@@ -113,7 +113,7 @@ function MechBay() {
                                 {
                                     battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[2] !== null &&
                                     <>
-                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[2]} bay={2} />
+                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[2]} bay={2} showStats={true} />
                                         <div><button onClick={() => battleTechstore.clearBay(2)}>remove</button></div>
                                     </>
                                 }
@@ -123,7 +123,7 @@ function MechBay() {
                                 {
                                     battleTechstore.getMechLab().bays && battleTechstore.getMechLab().bays[3] !== null &&
                                     <>
-                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[3]} bay={3} />
+                                        <MechBayContent mechname={battleTechstore.getMechLab().bays[3]} bay={3} showStats={true} />
                                         <div><button onClick={() => battleTechstore.clearBay(3)}>remove</button></div>
                                     </>
                                 }

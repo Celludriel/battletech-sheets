@@ -6,6 +6,7 @@ import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
 import Home from './pages/Home';
 import MechBay from './pages/Mechbay';
+import CommandCenter from './pages/CommandCenter';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="mechbay" element={<MechBay />} />
+        <Route path="command-center" element={<CommandCenter />} />
       </Routes>
   );
 }

@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -50,7 +51,7 @@ body {
   padding-left: 7rem !important;
 }
 
-.p-datatable.p-datatable-sm .p-datatable-tbody > tr > td {
+.p-datatable.p-datatable-sm .p-datatable-tbody>tr>td {
   padding: 0 0.5rem;
 }
 
@@ -86,13 +87,16 @@ div {
 }
 
 .react-horizontal-scrolling-menu--scroll-container {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* --------------------------------------------- */
 
-.container {  display: grid;
+.container {
+  display: grid;
   grid-template-columns: 1100px 0.2fr;
   grid-template-rows: 195px 0.6fr 1.4fr;
   grid-auto-columns: 1fr;
@@ -104,14 +108,17 @@ div {
     "CriticalData InternalData";
 }
 
-.ArmorPoints { grid-area: ArmorPoints; }
-
-.Header {
-  justify-self: end; 
-  grid-area: Header; 
+.ArmorPoints {
+  grid-area: ArmorPoints;
 }
 
-.TopInformation {  display: grid;
+.Header {
+  justify-self: end;
+  grid-area: Header;
+}
+
+.TopInformation {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-auto-columns: 1fr;
@@ -122,7 +129,8 @@ div {
   grid-area: TopInformation;
 }
 
-.MechInformation {  display: grid;
+.MechInformation {
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-auto-columns: 1fr;
@@ -133,7 +141,8 @@ div {
   grid-area: MechInformation;
 }
 
-.WarriorInformation {  display: grid;
+.WarriorInformation {
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.1fr 0.9fr;
   grid-auto-columns: 1fr;
@@ -145,9 +154,9 @@ div {
   grid-area: WarriorInformation;
 }
 
-.WarriorData { 
+.WarriorData {
   justify-self: center;
-  grid-area: WarriorData; 
+  grid-area: WarriorData;
 }
 
 .CockpitImage {
@@ -156,9 +165,12 @@ div {
   grid-area: CockpitImage;
 }
 
-.CriticalData { grid-area: CriticalData; }
+.CriticalData {
+  grid-area: CriticalData;
+}
 
-.InternalData {  display: grid;
+.InternalData {
+  display: grid;
   grid-template-columns: 0.05fr 1fr;
   grid-template-rows: 0.8fr 1fr;
   grid-auto-columns: 1fr;
@@ -175,11 +187,16 @@ div {
   grid-area: HeatBar;
 }
 
-.InternalPoints { grid-area: InternalPoints; }
+.InternalPoints {
+  grid-area: InternalPoints;
+}
 
-.HeatSinks { grid-area: HeatSinks; }
+.HeatSinks {
+  grid-area: HeatSinks;
+}
 
-.armorPointsContainer {  display: grid;
+.armorPointsContainer {
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 36px 1fr;
   grid-auto-columns: 1fr;
@@ -190,7 +207,8 @@ div {
     ".";
 }
 
-.internalContainer {  display: grid;
+.internalContainer {
+  display: grid;
   grid-template-columns: 60px 1fr 60px 1fr 60px 1fr;
   grid-template-rows: 36px 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
   grid-auto-columns: 1fr;
@@ -205,49 +223,92 @@ div {
     ". LeftLeg . DamageTransfer . RightLeg";
 }
 
-.LeftArm { grid-area: LeftArm; }
+.LeftArm {
+  grid-area: LeftArm;
+}
 
-.LeftTorso { grid-area: LeftTorso; }
+.LeftTorso {
+  grid-area: LeftTorso;
+}
 
-.LeftLeg { grid-area: LeftLeg; }
+.LeftLeg {
+  grid-area: LeftLeg;
+}
 
-.CriticalInternalBanner { grid-area: CriticalInternalBanner; }
+.CriticalInternalBanner {
+  grid-area: CriticalInternalBanner;
+}
 
-.LA13 { grid-area: LA13; }
+.LA13 {
+  grid-area: LA13;
+}
 
-.LA46 { grid-area: LA46; }
+.LA46 {
+  grid-area: LA46;
+}
 
-.LT13 { grid-area: LT13; }
+.LT13 {
+  grid-area: LT13;
+}
 
-.LT46 { grid-area: LT46; }
+.LT46 {
+  grid-area: LT46;
+}
 
-.Head { grid-area: Head; }
+.Head {
+  grid-area: Head;
+}
 
-.CenterTorso { grid-area: CenterTorso; }
+.CenterTorso {
+  grid-area: CenterTorso;
+}
 
-.CT13 { grid-area: CT13; }
+.CT13 {
+  grid-area: CT13;
+}
 
-.CT46 { grid-area: CT46; }
+.CT46 {
+  grid-area: CT46;
+}
 
-.CriticalHits { grid-area: CriticalHits; }
+.CriticalHits {
+  grid-area: CriticalHits;
+}
 
-.DamageTransfer { grid-area: DamageTransfer; }
+.DamageTransfer {
+  grid-area: DamageTransfer;
+}
 
-.RightArm { grid-area: RightArm; }
+.RightArm {
+  grid-area: RightArm;
+}
 
-.RA13 { grid-area: RA13; }
+.RA13 {
+  grid-area: RA13;
+}
 
-.RA46 { grid-area: RA46; }
+.RA46 {
+  grid-area: RA46;
+}
 
-.RightTorso { grid-area: RightTorso; }
+.RightTorso {
+  grid-area: RightTorso;
+}
 
-.RT13 { grid-area: RT13; }
+.RT13 {
+  grid-area: RT13;
+}
 
-.RT46 { grid-area: RT46; }
+.RT46 {
+  grid-area: RT46;
+}
 
-.RightLeg { grid-area: RightLeg; }
+.RightLeg {
+  grid-area: RightLeg;
+}
 
-.mainApp {  display: grid;
+.mainApp {
+  display: grid;
   grid-template-columns: 10% 1fr 10%;
   grid-template-rows: 10% 1fr 10%;
   grid-auto-columns: 1fr;
@@ -259,14 +320,19 @@ div {
     "Bottom Bottom Bottom";
 }
 
-.Top { grid-area: Top; }
+.Top {
+  grid-area: Top;
+}
 
-.Bottom { grid-area: Bottom; }
+.Bottom {
+  grid-area: Bottom;
+}
 
 .Content {
-  justify-self: center; 
-  align-self: center;  
-  grid-area: Content; }
+  justify-self: center;
+  align-self: center;
+  grid-area: Content;
+}
 
 tr.red {
   background-color: red;
@@ -278,7 +344,8 @@ tr.none {
 
 /* --------------------------------------------- */
 
-.homeContainer {  display: grid;
+.homeContainer {
+  display: grid;
   grid-template-columns: 0.4fr 1.3fr 1.3fr 1.3fr 1.3fr 00.4fr;
   grid-template-rows: 0.2fr 4fr 0.2fr;
   grid-auto-columns: 1fr;
@@ -290,19 +357,29 @@ tr.none {
     "HomeLeftMargin BottomMargin BottomMargin BottomMargin BottomMargin HomeRightMargin";
 }
 
-.HomeMenuBar { grid-area: HomeMenuBar; }
+.HomeMenuBar {
+  grid-area: HomeMenuBar;
+}
 
-.HomeContent { grid-area: HomeContent; }
+.HomeContent {
+  grid-area: HomeContent;
+}
 
-.HomeLeftMargin { grid-area: HomeLeftMargin; }
+.HomeLeftMargin {
+  grid-area: HomeLeftMargin;
+}
 
-.HomeRightMargin { grid-area: HomeRightMargin; }
+.HomeRightMargin {
+  grid-area: HomeRightMargin;
+}
 
-.BottomMargin { grid-area: BottomMargin; }
+.BottomMargin {
+  grid-area: BottomMargin;
+}
 
 /* --------------------------------------------- */
 
-.mechbaycontainer {  
+.mechbaycontainer {
   display: grid;
   grid-template-columns: 0.4fr 1.3fr 1.3fr 1.3fr 1.3fr 00.4fr;
   grid-template-rows: 0.2fr 0.2fr 0.4fr 0.2fr 3.7fr 0.6fr;
@@ -318,24 +395,148 @@ tr.none {
     "BayLeftMargin Footer Footer Footer Footer BayRightMargin";
 }
 
-.BayFilterBar { grid-area: BayFilterBar; }
+.BayFilterBar {
+  grid-area: BayFilterBar;
+}
 
-.BayMenuBar { grid-area: BayMenuBar; }
+.BayMenuBar {
+  grid-area: BayMenuBar;
+}
 
-.BayCardRoller { grid-area: BayCardRoller; }
+.BayCardRoller {
+  grid-area: BayCardRoller;
+}
 
-.BayLeftMargin { grid-area: BayLeftMargin; }
+.BayLeftMargin {
+  grid-area: BayLeftMargin;
+}
 
-.BayRightMargin { grid-area: BayRightMargin; }
+.BayRightMargin {
+  grid-area: BayRightMargin;
+}
 
-.Footer { grid-area: Footer; }
+.Footer {
+  grid-area: Footer;
+}
 
-.MechBay1 { grid-area: MechBay1; }
+.MechBay1 {
+  grid-area: MechBay1;
+}
 
-.MechBay2 { grid-area: MechBay2; }
+.MechBay2 {
+  grid-area: MechBay2;
+}
 
-.MechBay3 { grid-area: MechBay3; }
+.MechBay3 {
+  grid-area: MechBay3;
+}
 
-.MechBay4 { grid-area: MechBay4; }
+.MechBay4 {
+  grid-area: MechBay4;
+}
 
-.Overview { grid-area: Overview; }
+.Overview {
+  grid-area: Overview;
+}
+
+/* --------------------------------------------- */
+
+.commandCenterContainer {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 0.1fr 0.6fr 0.6fr 0.1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". CommandCenterTopBar ."
+    "CommandCenterTopLeftBox MechSheetBox CommandCenterTopRightBox"
+    "CommandCenterBottomLeftBox MechSheetBox CommandCenterBottomRightBox"
+    "CommandCenterBottomBar CommandCenterBottomBar CommandCenterBottomBar";
+}
+
+.MechSheetBox {
+  grid-area: MechSheetBox;
+  justify-self: center;
+  zoom: 60%
+}
+
+.CommandCenterBottomBar {
+  grid-area: CommandCenterBottomBar;
+}
+
+.CommandCenterTopLeftBox {
+  display: grid;
+  grid-template-columns: 0.4fr 2.2fr 0.4fr;
+  grid-template-rows: 0.2fr 2.5fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". CCTLMech ."
+    ". . .";
+  grid-area: CommandCenterTopLeftBox;
+  background-color: olive;
+}
+
+.CCTLMech {
+  grid-area: CCTLMech;
+}
+
+.CommandCenterBottomLeftBox {
+  display: grid;
+  grid-template-columns: 0.4fr 2.2fr 0.4fr;
+  grid-template-rows: 0.2fr 2.5fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". CCBLMech ."
+    ". . .";
+  grid-area: CommandCenterBottomLeftBox;
+  background-color: yellow;
+}
+
+.CCBLMech {
+  grid-area: CCBLMech;
+}
+
+.CommandCenterTopRightBox {
+  display: grid;
+  grid-template-columns: 0.4fr 2.2fr 0.4fr;
+  grid-template-rows: 0.2fr 2.5fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". CCTRMech ."
+    ". . .";
+  grid-area: CommandCenterTopRightBox;
+  background-color: red;
+}
+
+.CCTRMech {
+  grid-area: CCTRMech;
+}
+
+.CommandCenterBottomRightBox {
+  display: grid;
+  grid-template-columns: 0.3fr 2.3fr 0.3fr;
+  grid-template-rows: 0.2fr 2.5fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". CCBRMech ."
+    ". . .";
+  grid-area: CommandCenterBottomRightBox;
+  background-color: royalblue;
+}
+
+.CCBRMech {
+  grid-area: CCBRMech;
+}
+
+.CommandCenterTopBar {
+  grid-area: CommandCenterTopBar;
+}

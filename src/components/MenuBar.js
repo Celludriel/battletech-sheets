@@ -19,6 +19,10 @@ function MenuBar() {
         {
             label: 'Mechbay',
             command:()=>{ navigateToPage('/mechbay')}
+        },
+        {
+            label: 'Command Center',
+            command:()=>{ navigateToPage('/command-center')}
         }
     ];
 
